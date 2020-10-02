@@ -1,0 +1,32 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceBlock name="copyright" remove="true"></referenceBlock>
+        <referenceBlock name="form.subscribe" remove="true"></referenceBlock>
+
+        <referenceContainer name="footer-container" >
+            <block class="Magento\Framework\View\Element\Template" name="custom-footer" template="Magento_Theme::html/hr.phtml" before="-" />
+        </referenceContainer>
+        <referenceContainer name="footer_links" remove="true">
+            <block class="Magento\Cms\Block\Block" name="remove-footer-link"   >
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="header-wrapper">
+            <container name="header-left" htmlTag="div" htmlClass="header-left" />
+            <container name="header-right" htmlTag="div" htmlClass="header-right" />
+        </referenceContainer>
+        <referenceContainer name="header.panel.wrapper" remove="true"/>
+        <referenceContainer name="header.panel" remove="true"/>
+        <move element="navigation.sections" destination="header-left" />
+        <move element="minicart" destination="header-right"/>
+        <move element="top.search" destination="header-right"/>
+        <move element="logo" destination="header-right"/>
+        <move element="header.links" destination="header-right"/>
+        <move element="wish-list-link" destination="header-right"/>
+        <move element="logo" destination="header-wrapper" before="header-right" />
+    </body>
+</page>

@@ -1,0 +1,104 @@
+<hr style="background-color: #e4e4e4; height: 1px">
+<div class="section-title">
+<!--    <h2 class="mt-1 mb-1 mr-5">FEATURED PRODUCTS</h2>-->
+<!--    <a class="btn with-icon mt-1 mb-1">outlet<i class="fas fa-long-arrow-alt-right"></i></a>-->
+</div>
+
+
+<div class="product data items"
+     data-mage-init='{"mage/tabs": {"openedState": "active", "animate": {"duration": 100}, "active": 0, "disabledState": "disabled"}}'>
+    <div class="item title" data-role="collapsible">
+        <a class="switch" data-toggle="trigger" href="#tab-new">New Arrival</a>
+    </div>
+    <div id="tab-new" class="item content" data-role="content">
+
+        <?php echo $this->getLayout()
+            ->createBlock("Magento\Catalog\Block\Product\Widget\NewWidget")
+            ->setDisplayType("all_products")
+            ->setProductsCount("5")
+            ->setTemplate("product/widget/new/content/new_grid.phtml")
+            ->toHtml(); ?>
+
+
+    </div>
+
+    <div class="item title" data-role="collapsible">
+        <a class="switch" data-toggle="trigger" href="#tab-kitchen">Kitchen</a>
+    </div>
+    <div id="tab-kitchen" class="item content" data-role="content">
+        <?php echo $this->getLayout()
+            ->createBlock("Magento\CatalogWidget\Block\Product\ProductsList")
+            ->setShowPager("0")
+            ->setProductsCount("5")
+            ->setTemplate("Magento_CatalogWidget::product/widget/content/grid.phtml")
+            ->setConditionsEncoded("^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`6`^]^]")
+            ->toHtml(); ?>
+    </div>
+
+    <div class="item title" data-role="collapsible">
+        <a class="switch" data-toggle="trigger" href="#tab-dining">Dining</a>
+    </div>
+    <div id="tab-dining" class="item content" data-role="content">
+        <?php echo $this->getLayout()
+            ->createBlock("Magento\CatalogWidget\Block\Product\ProductsList")
+            ->setShowPager("0")
+            ->setProductsCount("5")
+            ->setTemplate("Magento_CatalogWidget::product/widget/content/grid.phtml")
+            ->setConditionsEncoded("^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`5`^]^]")
+            ->toHtml(); ?>
+    </div>
+
+    <div class="item title" data-role="collapsible">
+        <a class="switch" data-toggle="trigger" href="#tab-bedroom">Bedroom</a>
+    </div>
+    <div id="tab-bedroom" class="item content" data-role="content">
+        <?php echo $this->getLayout()
+            ->createBlock("Magento\CatalogWidget\Block\Product\ProductsList")
+            ->setShowPager("0")
+            ->setProductsCount("5")
+            ->setTemplate("Magento_CatalogWidget::product/widget/content/grid.phtml")
+            ->setConditionsEncoded("^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`3`^]^]")
+            ->toHtml(); ?>
+    </div>
+
+    <div class="item title" data-role="collapsible">
+        <a class="switch" data-toggle="trigger" href="#tab-living">Living</a>
+    </div>
+    <div id="tab-living" class="item content" data-role="content">
+        <?php echo $this->getLayout()
+            ->createBlock("Magento\CatalogWidget\Block\Product\ProductsList")
+            ->setShowPager("0")
+            ->setProductsCount("5")
+            ->setTemplate("Magento_CatalogWidget::product/widget/content/grid.phtml")
+            ->setConditionsEncoded("^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`7`^]^]")
+            ->toHtml(); ?>
+    </div>
+
+    <div class="item title" data-role="collapsible">
+        <a class="switch" data-toggle="trigger" href="#tab-office">Office</a>
+    </div>
+    <div id="tab-office" class="item content" data-role="content">
+        <?php echo $this->getLayout()
+            ->createBlock("Magento\CatalogWidget\Block\Product\ProductsList")
+            ->setShowPager("0")
+            ->setProductsCount("5")
+            ->setTemplate("Magento_CatalogWidget::product/widget/content/grid.phtml")
+            ->setConditionsEncoded("^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`8`^]^]")
+            ->toHtml(); ?>
+    </div>
+
+    <div class="item title" data-role="collapsible">
+        <a class="switch" data-toggle="trigger" href="#tab-outdoor">Outdoor</a>
+    </div>
+    <div id="tab-outdoor" class="item content" data-role="content">
+        <?php echo $this->getLayout()
+            ->createBlock("Magento\CatalogWidget\Block\Product\ProductsList")
+            ->setShowPager("0")
+            ->setProductsCount("5")
+            ->setTemplate("Magento_CatalogWidget::product/widget/content/grid.phtml")
+            ->setConditionsEncoded("^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`9`^]^]")
+            ->toHtml(); ?>
+    </div>
+</div>
+
+<hr style="background-color: #e4e4e4; height: 1px">

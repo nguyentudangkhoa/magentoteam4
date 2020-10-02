@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="content">
+            <container name="furniture.top" htmlTag="div" htmlClass="furniture-top" label="Furniture Top">
+                <container name="furniture.top.left" htmlTag="div" htmlClass="furniture-top-left" label="Furniture Top Left">
+                    <block class="Magento\Cms\Block\Block" name="top-left">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">top-left</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="furniture.top.right" htmlTag="div" htmlClass="furniture-top-right" label="Furniture Top Right">
+                    <block class="Magento\Cms\Block\Block" name="top-right">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">top-right</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+
+            <container name="furniture.shipping" htmlTag="div" htmlClass="furniture-shipping" label="Furniture Shipping">
+                <block class="Magento\Framework\View\Element\Template" name="shipping" template="Magento_Theme::html/servicewidgt.phtml"/>
+            </container>
+
+            <container name="furniture.middle" htmlTag="div" htmlClass="furniture-middle" label="Furniture middle">
+                <container name="furniture.middle.top" htmlTag="div" htmlClass="furniture-middle-top" label="Furniture Middle Top">
+                    <block class="Vendorr\Modulee\Block\Widget\Feats" template="Vendorr_Modulee::widget/feats.phtml" name="Feats"/>
+                </container>
+                <container name="furniture.middle.bot" htmlTag="div" htmlClass="furniture-middle-bot" label="Furniture Middle Bot">
+                    <block class="Magento\Cms\Block\Block" name="middle-bot">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">middle-bot</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+
+            <container name="furniture.bottom" htmlTag="div" htmlClass="furniture-bottom" label="Furniture bottom">
+                <block class="BestSeller\Seller\Block\Widget\Bestsellerproduct" template="BestSeller_Seller::widget/bestsellerwidget.phtml" name="Bestsellerproduct"/>
+            </container>
+
+            <container name="furniture.item" htmlTag="div" htmlClass="furniture-item" label="Furniture item">
+                <block class="Magento\Framework\View\Element\Template" name="item" template="Magento_Theme::html/item.phtml"/>
+            </container>
+
+        </referenceContainer>
+    </body>
+</page>

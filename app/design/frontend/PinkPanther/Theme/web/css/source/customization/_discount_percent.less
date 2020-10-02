@@ -1,0 +1,44 @@
+//
+//  Common
+//  Apply to all the screen sizes
+//  _____________________________________________
+
+
+& when (@media-common = true) {
+  .product-item-info {
+    position: relative;
+    .discount-percent {
+      position: absolute;
+      top: 9px;
+      z-index: 100;
+      background: red;
+      color: #fff;
+      padding: 7px;
+      border-radius: 30px;
+      right: 9px;
+    }
+    .product-item-details {
+      .price-label {
+        display: none;
+      }
+      .old-price {
+        .price {
+          text-decoration: line-through;
+        }
+      }
+    }
+/*    .product-social-links,
+    .block-bundle-summary,
+    .product-item,
+    .table-comparison {
+      .action.towishlist {
+        &:extend(.abs-actions-addto all);
+        .lib-icon-font-symbol(
+          @_icon-font-content: @icon-wishlist-full,
+          @_icon-font-position: before
+        );
+      }
+    }*/
+
+  }
+}
